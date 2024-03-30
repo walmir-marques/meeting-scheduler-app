@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import logo from "@/public/logo.svg";
 import { Button } from "@/components/ui/button";
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 
 function Header() {
   return (
@@ -28,8 +31,12 @@ function Header() {
         </li>
       </ul>
       <div>
-        <Button variant="ghost">Login</Button>
-        <Button>Get Started</Button>
+        <LoginLink>
+          <Button variant="ghost">Login</Button>
+        </LoginLink>
+        <RegisterLink>
+          <Button>Get Started</Button>
+        </RegisterLink>
       </div>
     </header>
   );
